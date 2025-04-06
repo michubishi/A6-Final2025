@@ -1,6 +1,8 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 namespace NodeCanvas.Tasks.Conditions {
@@ -8,6 +10,8 @@ namespace NodeCanvas.Tasks.Conditions {
 	public class SoundDetectedCT : ConditionTask {
 
         public BBParameter<int> foodSound;
+		public BBParameter<int> heardSound;
+		public NavMeshAgent navAgent;
 
         protected override string OnInit(){
 			return null;
@@ -25,10 +29,10 @@ namespace NodeCanvas.Tasks.Conditions {
 
 		
 		protected override bool OnCheck() {
-            Collider[] colliderDetect = Physics.OverlapSphere(new Vector3(0, 0, 0), 20, LayerMask.GetMask("Player"));
+            Collider[] colliderDetect = Physics.OverlapSphere(new Vector3(navAgent.transform.position.x, navAgent.transform.position.y, navAgent.transform.position.z), 4, LayerMask.GetMask("Player"));
             if (Input.GetKeyDown(KeyCode.E))
             {
-                for (int i = 0; i < colliderDetect.Length; i++)
+                for (int i = 0; i < colliderDetect.Length;)
                 {
 					return true;
                 }
@@ -36,6 +40,8 @@ namespace NodeCanvas.Tasks.Conditions {
 
 			return false;
         }
+
+		
 
     }
 }

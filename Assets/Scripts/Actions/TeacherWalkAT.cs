@@ -20,10 +20,9 @@ namespace NodeCanvas.Tasks.Actions {
 		}
 
 		protected override void OnUpdate() {
-			navAgent.SetDestination(location.value);
-
-
-
+            navAgent.speed = 3;
+            navAgent.SetDestination(location.value);
+			
 			if(navAgent.transform.position.x == location.value.x)
 			{
 				Debug.Log("Persona");

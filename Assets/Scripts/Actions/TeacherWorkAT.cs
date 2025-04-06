@@ -1,54 +1,42 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class TeacherHearAT : ActionTask {
+	public class TeacherWorkAT : ActionTask {
 
-        public BBParameter<int> foodSound;
-        public BBParameter<GameObject> player;
-
-        public NavMeshAgent navAgent;
-
-		
+		public BBParameter<GameObject> desk;
+		public NavMeshAgent navAgent;
+		public Vector3 deskLocation;
 
         protected override string OnInit() {
 			return null;
 		}
 
-		
+	
 		protected override void OnExecute() {
 			
 		}
 
-		
 		protected override void OnUpdate() {
-            
-			foodSound.value += 10;
-			Debug.Log(foodSound.value);
-			navAgent.speed = 0;
-			EndAction(true); 
-			
-			
-			
-			
+			deskLocation = new Vector3(-5.2f, 0.5f, 0);
+			navAgent.SetDestination(deskLocation);
+			if(navAgent.transform.position.z >= deskLocation.z)
+			{
+				navAgent.speed = 0;
+				EndAction(true);
+			}
 		}
 
-		
 		protected override void OnStop() {
 			
 		}
 
-	
 		protected override void OnPause() {
 			
 		}
-
-		
-
 	}
 }
