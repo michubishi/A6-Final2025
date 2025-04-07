@@ -29,7 +29,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 		
 		protected override bool OnCheck() {
-            Collider[] colliderDetect = Physics.OverlapSphere(new Vector3(navAgent.transform.position.x, navAgent.transform.position.y, navAgent.transform.position.z), 4, LayerMask.GetMask("Player"));
+            Collider[] colliderDetect = Physics.OverlapSphere(new Vector3(navAgent.transform.position.x, navAgent.transform.position.y, navAgent.transform.position.z), 6, LayerMask.GetMask("Player"));
             if (Input.GetKeyDown(KeyCode.E))
             {
                 for (int i = 0; i < colliderDetect.Length;)

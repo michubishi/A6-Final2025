@@ -25,7 +25,6 @@ namespace NodeCanvas.Tasks.Actions {
 			
 			if(navAgent.transform.position.x == location.value.x)
 			{
-				Debug.Log("Persona");
                 EndAction(true);
             }
         }
