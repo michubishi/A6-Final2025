@@ -15,7 +15,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		
 		protected override void OnExecute() {
-			
+			navAgent.speed = 3;
 		}
 
 		
