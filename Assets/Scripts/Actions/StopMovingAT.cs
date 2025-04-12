@@ -5,21 +5,24 @@ using UnityEngine.AI;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class WalkToStudentAT : ActionTask {
+	public class StopMovingAT : ActionTask {
 
 		public NavMeshAgent navAgent;
-		public Vector3 deskLocation;
-		
+		public float elaspedTime;
+
 		protected override string OnInit() {
 			return null;
 		}
 
+		
 		protected override void OnExecute() {
-			navAgent.speed = 3;
-            deskLocation = new Vector3(0.45f, 0.5f, -3.7f);
-        }
+			navAgent.speed = 0;
+			EndAction(true);
+		}
+
+	
 		protected override void OnUpdate() {
-			navAgent.SetDestination(deskLocation);
+			
 		}
 
 		protected override void OnStop() {
