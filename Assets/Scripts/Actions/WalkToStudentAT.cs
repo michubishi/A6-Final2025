@@ -16,10 +16,15 @@ namespace NodeCanvas.Tasks.Actions {
 
 		protected override void OnExecute() {
 			navAgent.speed = 3;
-            deskLocation = new Vector3(0.45f, 0.5f, -3.7f);
+            deskLocation = new Vector3(2f, navAgent.transform.position.y, -4f);
         }
 		protected override void OnUpdate() {
 			navAgent.SetDestination(deskLocation);
+
+			if (navAgent.transform.position == deskLocation)
+			{
+				EndAction(true);
+			}
 		}
 
 		protected override void OnStop() {

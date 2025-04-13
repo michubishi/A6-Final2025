@@ -11,7 +11,8 @@ namespace NodeCanvas.Tasks.Conditions {
 
         public BBParameter<int> foodSound;
 		public BBParameter<int> heardSound;
-		public NavMeshAgent navAgent;
+      
+        public NavMeshAgent navAgent;
 
         protected override string OnInit(){
 			return null;
