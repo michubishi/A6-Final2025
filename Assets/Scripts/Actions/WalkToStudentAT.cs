@@ -7,6 +7,12 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class WalkToStudentAT : ActionTask {
 
+		/**
+		 * Author: Michelle Vuong
+		 * Description: Walks to the student (opponent) desk.
+		 */
+
+
 		public NavMeshAgent navAgent;
 		public Vector3 deskLocation;
 		
