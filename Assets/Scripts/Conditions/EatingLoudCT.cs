@@ -22,7 +22,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	
 		protected override bool OnCheck() {
-			if(heardSound.value >= 100)
+			if(heardSound.value >= 80)
 			{
 				return true;
 			}

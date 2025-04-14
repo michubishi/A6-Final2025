@@ -8,6 +8,7 @@ namespace NodeCanvas.Tasks.Actions {
 	public class CallTeacherAT : ActionTask {
 
 		public BBParameter<bool> askedHelp;
+		public GameObject helpSpeech;
 		public float elaspedTime;
 		
 		protected override string OnInit() {
@@ -22,9 +23,11 @@ namespace NodeCanvas.Tasks.Actions {
 		
 		protected override void OnUpdate() {
             elaspedTime += Time.deltaTime;
+			helpSpeech.SetActive(true);
             askedHelp.value = true;
             if (elapsedTime > 10)
 			{
+				helpSpeech.SetActive(false);
 				askedHelp.value = false;
                 EndAction(true);
             }

@@ -10,6 +10,7 @@ namespace NodeCanvas.Tasks.Actions {
 		public NavMeshAgent navAgent;
 		public BBParameter<bool> ateAgain;
 		public float elaspedTime;
+		public GameObject susSpeech;
 
 		protected override string OnInit() {
 			return null;
@@ -26,13 +27,15 @@ namespace NodeCanvas.Tasks.Actions {
 
 			if (Input.GetKeyDown(KeyCode.E))
 			{
-				ateAgain.value = true;
+                susSpeech.SetActive(false);
+                ateAgain.value = true;
 				EndAction(true);
 			}
 			
 
 			if(elaspedTime >= 3)
 			{
+				susSpeech.SetActive(false);
 				EndAction(true);
 			}
 			

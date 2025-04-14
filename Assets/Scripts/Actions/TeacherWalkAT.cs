@@ -9,6 +9,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public NavMeshAgent navAgent;
 		public BBParameter<Vector3> location;
+		public float locationX;
+		public float locationZ;
 
 		protected override string OnInit() {
 			return null;
@@ -21,9 +23,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 		protected override void OnUpdate() {
             navAgent.speed = 3;
+			location = new Vector3(locationX, navAgent.transform.position.y, locationZ);
             navAgent.SetDestination(location.value);
 			
-			if(navAgent.transform.position.x == location.value.x)
+			if(navAgent.transform.position == location.value)
 			{
                 EndAction(true);
             }

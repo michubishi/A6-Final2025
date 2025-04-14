@@ -12,6 +12,7 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<int> foodSound;
         public BBParameter<GameObject> player;
         public BBParameter<int> eatingCounter;
+		public GameObject susSpeech;
 
         public NavMeshAgent navAgent;
 		public float elaspedTime;
@@ -29,6 +30,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		
 		protected override void OnUpdate() {
+			susSpeech.SetActive(true);
             elaspedTime += Time.deltaTime;
 			foodSound.value += 10;
 			Debug.Log(foodSound.value);

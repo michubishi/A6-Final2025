@@ -18,6 +18,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		protected override bool OnCheck() {
 			if (ateAgain.value == true)
 			{
+				ateAgain.value = false;
 				return true;
 			}
 			return false;
