@@ -15,7 +15,7 @@ namespace NodeCanvas.Tasks.Actions {
 		}
 
 		protected override void OnExecute() {
-			navAgent.speed = 3;
+			navAgent.speed = 5;
             deskLocation = new Vector3(2f, navAgent.transform.position.y, -4f);
         }
 		protected override void OnUpdate() {

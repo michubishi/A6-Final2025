@@ -10,7 +10,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public BBParameter<GameObject> desk;
 		public NavMeshAgent navAgent;
+		public GameObject deskSpeech;
 		public Vector3 deskLocation;
+		public float deskLocationX;
+		public float deskLocationZ;
 
         protected override string OnInit() {
 			return null;
@@ -22,12 +25,14 @@ namespace NodeCanvas.Tasks.Actions {
 		}
 
 		protected override void OnUpdate() {
-			deskLocation = new Vector3(-5.2f, 0.5f, 0);
+			
+			deskSpeech.SetActive(true);
+            deskLocation = new Vector3(deskLocationX, navAgent.transform.position.y, deskLocationZ);
 			navAgent.SetDestination(deskLocation);
-			if(navAgent.transform.position.z >= deskLocation.z)
+			if(navAgent.transform.position == deskLocation)
 			{
+				deskSpeech.SetActive(false);
 				navAgent.speed = 0;
-				EndAction(true);
 			}
 		}
 
