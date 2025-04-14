@@ -12,15 +12,6 @@ namespace NodeCanvas.Tasks.Conditions {
 			return null;
 		}
 
-		protected override void OnEnable() {
-			
-		}
-
-		protected override void OnDisable() {
-			
-		}
-
-	
 		protected override bool OnCheck() {
 			if(heardSound.value >= 80)
 			{

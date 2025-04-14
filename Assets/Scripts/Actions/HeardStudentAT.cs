@@ -25,13 +25,5 @@ namespace NodeCanvas.Tasks.Actions {
 			EndAction(true);
 		}
 
-		protected override void OnStop() {
-			
-		}
-
-	
-		protected override void OnPause() {
-			
-		}
 	}
 }

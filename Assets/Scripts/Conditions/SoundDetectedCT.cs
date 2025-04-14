@@ -18,18 +18,6 @@ namespace NodeCanvas.Tasks.Conditions {
 			return null;
 		}
 
-		
-		protected override void OnEnable() {
-			
-		}
-
-		//Called whenever the condition gets disabled.
-		protected override void OnDisable() {
-			
-		}
-       
-
-
         protected override bool OnCheck() {
             Collider[] colliderDetect = Physics.OverlapSphere(navAgent.transform.position, 6, LayerMask.GetMask("Player"));
 

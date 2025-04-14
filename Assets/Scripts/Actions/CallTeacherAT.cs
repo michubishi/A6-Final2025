@@ -15,12 +15,6 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override string OnInit() {
 			return null;
 		}
-
-		
-		protected override void OnExecute() {
-			
-		}
-
 		
 		protected override void OnUpdate() {
             elaspedTime += Time.deltaTime;
@@ -43,13 +37,5 @@ namespace NodeCanvas.Tasks.Actions {
 			
 		}
 
-		
-		protected override void OnStop() {
-			
-		}
-
-		protected override void OnPause() {
-			
-		}
 	}
 }

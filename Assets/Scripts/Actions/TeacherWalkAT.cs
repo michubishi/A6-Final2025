@@ -7,6 +7,11 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class TeacherWalkAT : ActionTask {
 
+		/**
+		 * Author: Michelle Vuong
+		 * Description: Sets the teacher to walk to a specified area.
+		 */
+
 		public NavMeshAgent navAgent;
 		public BBParameter<Vector3> location;
 		public float locationX;
@@ -14,11 +19,6 @@ namespace NodeCanvas.Tasks.Actions {
 
 		protected override string OnInit() {
 			return null;
-		}
-
-		
-		protected override void OnExecute() {
-			
 		}
 
 		protected override void OnUpdate() {
@@ -32,12 +32,5 @@ namespace NodeCanvas.Tasks.Actions {
             }
         }
 
-		protected override void OnStop() {
-			
-		}
-
-		protected override void OnPause() {
-			
-		}
 	}
 }

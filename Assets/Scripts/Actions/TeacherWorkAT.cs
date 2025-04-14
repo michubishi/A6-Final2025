@@ -8,6 +8,11 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class TeacherWorkAT : ActionTask {
 
+		/**
+		 * Author: Michelle Vuong
+		 * Description: Action task. Makes the teacher go to the desk.
+		 */
+
 		public BBParameter<GameObject> desk;
 		public NavMeshAgent navAgent;
 		public GameObject deskSpeech;
@@ -17,11 +22,6 @@ namespace NodeCanvas.Tasks.Actions {
 
         protected override string OnInit() {
 			return null;
-		}
-
-	
-		protected override void OnExecute() {
-			
 		}
 
 		protected override void OnUpdate() {
@@ -36,12 +36,5 @@ namespace NodeCanvas.Tasks.Actions {
 			}
 		}
 
-		protected override void OnStop() {
-			
-		}
-
-		protected override void OnPause() {
-			
-		}
 	}
 }

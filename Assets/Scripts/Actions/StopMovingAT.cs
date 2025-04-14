@@ -7,6 +7,11 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class StopMovingAT : ActionTask {
 
+		/**
+		 * Author: Michelle Vuong
+		 * Description: Stops the teacher from moving. It checks if the player eats again.
+		 */
+
 		public NavMeshAgent navAgent;
 		public BBParameter<bool> ateAgain;
 		public float elaspedTime;
@@ -41,12 +46,5 @@ namespace NodeCanvas.Tasks.Actions {
 			
 		}
 
-		protected override void OnStop() {
-			
-		}
-
-		protected override void OnPause() {
-			
-		}
 	}
 }

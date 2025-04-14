@@ -6,6 +6,11 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class TeacherWarnAT : ActionTask {
 
+		/**
+		 * Author: Michelle Vuong
+		 * Description: Warns the student with a speech bubble.
+		 */
+
 		public BBParameter<bool> isWarned;
 		public GameObject warningSpeech;
 		public float timePassed;
@@ -13,11 +18,6 @@ namespace NodeCanvas.Tasks.Actions {
 			return null;
 		}
 
-		
-		protected override void OnExecute() {
-			//isWarned.value = true;
-			//EndAction(true);
-		}
 
 		protected override void OnUpdate() {
 			warningSpeech.SetActive(true);
@@ -32,12 +32,5 @@ namespace NodeCanvas.Tasks.Actions {
 			}
 		}
 
-		protected override void OnStop() {
-			
-		}
-
-		protected override void OnPause() {
-			
-		}
 	}
 }

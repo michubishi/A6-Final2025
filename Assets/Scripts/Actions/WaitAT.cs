@@ -7,6 +7,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class WaitAT : ActionTask {
 
+        /**
+         * Author: Michelle Vuong
+         * Description: Action task. A timer.
+         */
 
         public float elaspedTime;
         public float timePassed;
@@ -17,12 +21,6 @@ namespace NodeCanvas.Tasks.Actions {
         }
 
 
-        protected override void OnExecute()
-        {
-
-        }
-
-        //Called once per frame while the action is active.
         protected override void OnUpdate()
         {
             elaspedTime += Time.deltaTime;

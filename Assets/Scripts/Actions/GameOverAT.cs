@@ -7,7 +7,11 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class GameOverAT : ActionTask {
 
-		
+		/*
+		 * Author: Michelle Vuong
+		 * Description: Loads the Game Over screen.
+		 */
+
 		protected override string OnInit() {
 			return null;
 		}
@@ -16,18 +20,6 @@ namespace NodeCanvas.Tasks.Actions {
 			SceneManager.LoadScene("GameOver");
 		}
 
-		protected override void OnUpdate() {
-			
-		}
-
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
-
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
-		}
+		
 	}
 }

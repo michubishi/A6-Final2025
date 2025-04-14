@@ -23,11 +23,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 	
 		protected override void OnExecute() {
-
-		}
+            chalkboardLocation = new Vector3(chalkboardX, navAgent.transform.position.y, chalkboardZ); //set the destination to walk too
+        }
 
 		protected override void OnUpdate() {
-			chalkboardLocation = new Vector3(chalkboardX, navAgent.transform.position.y, chalkboardZ); //set the destination to walk too
 			breakSpeech.SetActive(true); //show the speech bubble
 			navAgent.SetDestination(chalkboardLocation); //move to the set destination
 
@@ -37,14 +36,6 @@ namespace NodeCanvas.Tasks.Actions {
 				EndAction(true);
 			}
 		}
-
-		protected override void OnStop() {
-			
-		}
-
 		
-		protected override void OnPause() {
-			
-		}
 	}
 }

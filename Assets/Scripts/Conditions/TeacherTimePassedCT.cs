@@ -11,17 +11,6 @@ namespace NodeCanvas.Tasks.Conditions {
 		protected override string OnInit(){
 			return null;
 		}
-
-		
-		protected override void OnEnable() {
-
-		}
-
-		
-		protected override void OnDisable() {
-			
-		}
-
 		
 		protected override bool OnCheck() {
 			deskTimer.value += Time.deltaTime;
