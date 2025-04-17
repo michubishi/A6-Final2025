@@ -5,8 +5,8 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.Conditions {
 
 	public class EatingLoudCT : ConditionTask {
-
-		public BBParameter<float> heardSound;
+       
+        public BBParameter<float> heardSound;
 		
 		protected override string OnInit(){
 			return null;

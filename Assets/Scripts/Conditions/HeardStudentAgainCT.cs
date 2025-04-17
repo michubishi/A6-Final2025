@@ -7,7 +7,13 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class HeardStudentAgainCT : ConditionTask {
 
-		public BBParameter<bool> ateAgain;
+
+        /**
+		 * Author: Michelle Vuong
+		 * Description: Checks if it has been 17 seconds to enable the working mode for the teacher.
+		 */
+
+        public BBParameter<bool> ateAgain;
 
 		protected override string OnInit(){
 			return null;

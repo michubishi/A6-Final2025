@@ -6,7 +6,12 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class HasBeenWarnedCT : ConditionTask {
 
-		public BBParameter<bool> isWarned;
+        /**
+        * Author: Michelle Vuong
+        * Description: Checks if the student has been warned by the teacher already for eating.
+        */
+
+        public BBParameter<bool> isWarned;
 		protected override string OnInit(){
 			return null;
 		}

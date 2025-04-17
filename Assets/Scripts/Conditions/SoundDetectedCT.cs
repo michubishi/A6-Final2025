@@ -9,6 +9,11 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class SoundDetectedCT : ConditionTask {
 
+        /**
+		 * Author: Michelle Vuong
+		 * Description: Detects if the player attempts to eat while in the radius of the teacher.
+		 */
+
         public BBParameter<int> foodSound;
 		public BBParameter<int> heardSound;
       

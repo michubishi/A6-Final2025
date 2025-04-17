@@ -6,7 +6,11 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class SuspiciousCT : ConditionTask {
 
-		public BBParameter<float> heardSound;
+        /**
+		 * Author: Michelle Vuong
+		 * Description: Checks if the teacher detected the student eating enough times.
+		 */
+        public BBParameter<float> heardSound;
 		
 		protected override string OnInit(){
 			return null;

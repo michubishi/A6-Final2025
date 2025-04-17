@@ -6,7 +6,13 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class HelpStudentCT : ConditionTask {
 
-		public BBParameter<bool> askedHelp;
+
+        /**
+		 * Author: Michelle Vuong
+		 * Description: Checks if the student has called over the teacher for help.
+		 */
+
+        public BBParameter<bool> askedHelp;
 		protected override string OnInit(){
 			return null;
 		}
