@@ -14,9 +14,6 @@ namespace NodeCanvas.Tasks.Conditions {
 		 * Description: Detects if the player attempts to eat while in the radius of the teacher.
 		 */
 
-        public BBParameter<int> foodSound;
-		public BBParameter<int> heardSound;
-      
         public NavMeshAgent navAgent;
 
         protected override string OnInit(){
