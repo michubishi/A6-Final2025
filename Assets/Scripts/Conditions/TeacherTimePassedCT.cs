@@ -22,7 +22,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 			if(deskTimer.value >= 17)
 			{
-				deskTimer.value = 0;
+				deskTimer.value = 0; //reset the timer
 				return true;
 			}
 			return false;

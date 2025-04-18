@@ -26,13 +26,13 @@ namespace NodeCanvas.Tasks.Actions {
 
 		protected override void OnUpdate() {
 			
-			deskSpeech.SetActive(true);
-            deskLocation = new Vector3(deskLocationX, navAgent.transform.position.y, deskLocationZ);
-			navAgent.SetDestination(deskLocation);
-			if(navAgent.transform.position == deskLocation)
+			deskSpeech.SetActive(true); //show the desk speech of the teacher.
+            deskLocation = new Vector3(deskLocationX, navAgent.transform.position.y, deskLocationZ); //set desk location
+			navAgent.SetDestination(deskLocation); //move to desk location
+			if(navAgent.transform.position == deskLocation) //if they reach their location
 			{
-				deskSpeech.SetActive(false);
-				navAgent.speed = 0;
+				deskSpeech.SetActive(false); //turn off the speech
+				navAgent.speed = 0; //stop moving
 			}
 		}
 

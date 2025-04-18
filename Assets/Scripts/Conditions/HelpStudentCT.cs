@@ -17,7 +17,7 @@ namespace NodeCanvas.Tasks.Conditions {
 			return null;
 		}
 		protected override bool OnCheck() {
-			if(askedHelp.value == true)
+			if(askedHelp.value == true) //checks if the student has called the teacher for help
 			{
 				return true;
 			}

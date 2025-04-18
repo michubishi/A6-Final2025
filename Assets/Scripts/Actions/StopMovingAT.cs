@@ -23,24 +23,24 @@ namespace NodeCanvas.Tasks.Actions {
 
 		
 		protected override void OnExecute() {
-			navAgent.speed = 0;
+			navAgent.speed = 0; //stop the teacher
 		}
 
 	
 		protected override void OnUpdate() {
             elaspedTime += Time.deltaTime;
 
-			if (Input.GetKeyDown(KeyCode.E))
+			if (Input.GetKeyDown(KeyCode.E)) //if the player attempts to eat
 			{
-                susSpeech.SetActive(false);
-                ateAgain.value = true;
+                susSpeech.SetActive(false); //the UI pops up that shows the teacher being confused
+                ateAgain.value = true; 
 				EndAction(true);
 			}
 			
 
-			if(elaspedTime >= 3)
+			if(elaspedTime >= 3) //or, if it has been 3 seconds
 			{
-				susSpeech.SetActive(false);
+				susSpeech.SetActive(false); //turn off the speech
 				EndAction(true);
 			}
 			

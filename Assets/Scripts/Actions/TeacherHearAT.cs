@@ -14,7 +14,7 @@ namespace NodeCanvas.Tasks.Actions {
 		 * Description: Action task. Makes the UI of the sus bubble appear.
 		 */
 
-        public BBParameter<int> foodSound;
+        public BBParameter<int> heardSound;
         public BBParameter<GameObject> player;
         public BBParameter<int> eatingCounter;
 		public GameObject susSpeech;
@@ -31,11 +31,10 @@ namespace NodeCanvas.Tasks.Actions {
 		
 		
 		protected override void OnUpdate() {
-			susSpeech.SetActive(true);
+			susSpeech.SetActive(true); //show the UI for suspicion 
             elaspedTime += Time.deltaTime;
-			foodSound.value += 10;
-			Debug.Log(foodSound.value);
-			navAgent.speed = 0;
+            heardSound.value += 10; //add to the suspicion value 
+			navAgent.speed = 0; //stop moving
 			EndAction(true); 
 		}
 

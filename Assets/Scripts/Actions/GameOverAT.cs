@@ -17,7 +17,7 @@ namespace NodeCanvas.Tasks.Actions {
 		}
 
 		protected override void OnExecute() {
-			SceneManager.LoadScene("GameOver");
+			SceneManager.LoadScene("GameOver"); //load the game over screen
 		}
 
 		

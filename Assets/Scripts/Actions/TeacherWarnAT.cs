@@ -20,14 +20,14 @@ namespace NodeCanvas.Tasks.Actions {
 
 
 		protected override void OnUpdate() {
-			warningSpeech.SetActive(true);
+			warningSpeech.SetActive(true); //make the UI visible 
             timePassed += Time.deltaTime;
 
-			if(elapsedTime >= 6)
+			if(elapsedTime >= 6) //if it has been 6 seconds
 			{
-				isWarned.value = true;
-				warningSpeech.SetActive(false);
-                timePassed = 0;
+				isWarned.value = true; //the student has been warned
+				warningSpeech.SetActive(false); //turn the UI off
+                timePassed = 0; //reset the timer
 				EndAction(true);
 			}
 		}

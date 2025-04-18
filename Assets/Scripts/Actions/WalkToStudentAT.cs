@@ -9,7 +9,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		/**
 		 * Author: Michelle Vuong
-		 * Description: Walks to the student (opponent) desk.
+		 * Description: Walks to the player's desk.
 		 */
 
 
@@ -21,13 +21,13 @@ namespace NodeCanvas.Tasks.Actions {
 		}
 
 		protected override void OnExecute() {
-			navAgent.speed = 5;
-            deskLocation = new Vector3(2f, navAgent.transform.position.y, -4f);
+			navAgent.speed = 5; //make the teacher faster
+            deskLocation = new Vector3(2f, navAgent.transform.position.y, -4f); //set the player desk location
         }
 		protected override void OnUpdate() {
-			navAgent.SetDestination(deskLocation);
+			navAgent.SetDestination(deskLocation); //go to the player's desk
 
-			if (navAgent.transform.position == deskLocation)
+			if (navAgent.transform.position == deskLocation) //checks if the teacher has reached the player desk location
 			{
 				EndAction(true);
 			}

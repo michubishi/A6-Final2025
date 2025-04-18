@@ -17,7 +17,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		}
 
 		protected override bool OnCheck() {
-			if(isWarned.value == true)
+			if(isWarned.value == true) //checks if the player has already been warned.
 			{
 				return true;
 			}

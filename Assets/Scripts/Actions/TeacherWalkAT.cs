@@ -23,10 +23,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 		protected override void OnUpdate() {
             navAgent.speed = 3;
-			location = new Vector3(locationX, navAgent.transform.position.y, locationZ);
-            navAgent.SetDestination(location.value);
+			location = new Vector3(locationX, navAgent.transform.position.y, locationZ); //set specified area
+            navAgent.SetDestination(location.value); //go to the area
 			
-			if(navAgent.transform.position == location.value)
+			if(navAgent.transform.position == location.value) //checks if the teacher reaches the area 
 			{
                 EndAction(true);
             }

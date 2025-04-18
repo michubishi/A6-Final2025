@@ -10,7 +10,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
         /**
 		 * Author: Michelle Vuong
-		 * Description: Checks if it has been 17 seconds to enable the working mode for the teacher.
+		 * Description: Checks if the player attempted to eat again after already receiving a warning.
 		 */
 
         public BBParameter<bool> ateAgain;
@@ -20,9 +20,9 @@ namespace NodeCanvas.Tasks.Conditions {
 		}
 
 		protected override bool OnCheck() {
-			if (ateAgain.value == true)
+			if (ateAgain.value == true) //checks if they ate again
 			{
-				ateAgain.value = false;
+				ateAgain.value = false; //reset the value
 				return true;
 			}
 			return false;

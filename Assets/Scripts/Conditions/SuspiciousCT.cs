@@ -18,9 +18,9 @@ namespace NodeCanvas.Tasks.Conditions {
 
 
 		protected override bool OnCheck() {
-			if(heardSound.value >= 50)
+			if(heardSound.value >= 50) //checks if the teacher heard the player 5 times eating
 			{
-				return true;
+				return true; 
 			}
 			return false;
 		}

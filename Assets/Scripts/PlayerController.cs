@@ -7,37 +7,38 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+
+    /**
+    * Author: Michelle Vuong
+    * Description: Player functionaily. The player is able to eat food. This also checks the win/lose state of the player.
+    */
+
     public int foodProgress;
     public float timePassed;
     public TextMeshProUGUI progressText;
     public NavMeshAgent navAgent;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        foodProgress = 0;
+        foodProgress = 0; //reset food progress to 0
     }
 
-    // Update is called once per frame
     void Update()
     {
-        progressText.text = foodProgress.ToString() + "%";
+        progressText.text = foodProgress.ToString() + "%"; //display food progress on screen
+
         timePassed += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.E) && timePassed >= 3)
+        if (Input.GetKeyDown(KeyCode.E) && timePassed >= 3) //if the player attempts to eat and it has been 3 seconds passed (Cooldown)
         {
-            timePassed = 0;
-            foodProgress += 10;
+            timePassed = 0; //reset the cooldown
+            foodProgress += 10; //add to the percentage
         }
 
-        if(foodProgress >= 100)
+        if(foodProgress >= 100) //if the player reaches 100% progress, they win!
         {
             SceneManager.LoadScene("WinScreen");
         }
 
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(navAgent.transform.position, 5);
-    }
 }
